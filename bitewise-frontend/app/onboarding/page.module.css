@@ -1,0 +1,362 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.progress {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.progressBar {
+  width: 100%;
+  height: 6px;
+  background: #e0e7ff;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: width 0.3s ease;
+}
+
+.step {
+  text-align: center;
+}
+
+.step h2 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.step p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.inputGroup {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.inputGroup input,
+.inputGroup select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e1e5e9;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.radioGroup label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: normal;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.radioGroup input[type="radio"] {
+  width: auto;
+  margin: 0;
+}
+
+.goalCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.goalCard {
+  background: #ffffff;
+  border: 2px solid #e1e5e9;
+  border-radius: 15px;
+  padding: 20px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.goalCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.goalCard.selected {
+  border-color: #01030b;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: rgb(19, 1, 1);
+}
+
+.goalEmoji {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.goalCard h3 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+}
+
+.goalCard p {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.stepNav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.prevBtn,
+.nextBtn,
+.startBtn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.prevBtn {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.prevBtn:hover {
+  background: #e2e8f0;
+}
+
+.nextBtn,
+.startBtn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.nextBtn:hover,
+.startBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.nextBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.results {
+  text-align: left;
+}
+
+.resultCard {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.calorieTarget {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.macroBreakdown {
+  background: #f8fafc;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.macroBreakdown h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.macroGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.macroItem {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid #e1e5e9;
+}
+
+.macroLabel {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.macroValue {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.progressPrediction {
+  background: #ecfdf5;
+  border: 2px solid #10b981;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.startBtn {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 25px;
+    margin: 10px;
+  }
+  
+  .goalCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .stepNav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .macroGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6c7cff, #7b5fc4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.card {
+  background: #9bb1c4;
+  width: 100%;
+  max-width: 720px;
+  border-radius: 20px;
+  padding: 40px 48px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Progress bar */
+.progressWrapper {
+  margin-bottom: 32px;
+}
+
+.progressTrack {
+  height: 6px;
+  background: #e6e9ff;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #6c7cff, #7b5fc4);
+  transition: width 0.3s ease;
+}
+
+.stepText {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 8px;
+  color: #666;
+}
+
+/* Typography */
+.title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 32px;
+}
+
+/* Button */
+.nextBtn {
+  margin-top: 32px;
+  width: 140px;
+  height: 44px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(90deg, #6c7cff, #7b5fc4);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nextBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
